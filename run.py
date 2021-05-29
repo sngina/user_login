@@ -10,7 +10,9 @@ def save_user(user):
 def delete_credential(user):
     user.delete_credential()
 def display_credantials(user):
-    user.display_credantials()
+    return Login.display_credential()
+def create_credantials():
+
 
 
 login()
