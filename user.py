@@ -6,6 +6,20 @@ class   Login:
         self.email = email
         self.password = password
     login_list = []
+    
+    # login method for the user
+    def login(self) :
+        print("Please add your username and password!")
+        user_name = input("Enter username: ")
+        password = input("Enter your password: ")
+        if self.login_list[0] == user_name  and self.login_list[4] == password:
+            print("Okay!")
+              
+        else:
+            print("Invalid user name and password!")
+        # print(user_name)
+        # print(password)
+    # save method for the user
     def save_user(self) :
         Login.login_list.append(self)
     def delete_credential(self) :
@@ -13,9 +27,10 @@ class   Login:
     @classmethod
     def display_credential(cls):
         return cls.login_list
+
     
-    
+# Login.login() 
 # Login.save_user("name")
 
-# print(Login.login_list)
+
 # Login.delete_contact("name")
