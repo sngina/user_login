@@ -20,6 +20,7 @@ class   Login:
     # save method for the user
     def save_user(self) :
         Login.login_list.append(self)
+        print("Saved!")
     def delete_credential(self) :
         Login.login_list.remove(self)
     @classmethod
