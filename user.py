@@ -5,12 +5,12 @@ class   Login:
         self.phone_number = phone_number
         self.email = email
         self.password = password
-    login_list = ["first_name",]
+    login_list = ["Stella","Ngina","0726091916","sngina707@gmail.com","Maingi"]
     
     # login method for the user
     @classmethod
     def login(cls,user_name,password) :
-        if cls.login_list[0] == user_name  and cls.login_list[3] == password:
+        if cls.login_list[0] == user_name  and cls.login_list[4] == password:
             print("Okay!")
               
         else:
