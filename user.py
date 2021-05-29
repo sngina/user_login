@@ -5,7 +5,9 @@ class   Login:
         self.phone_number = phone_number
         self.email = email
         self.password = password
-    login_list = []
+    login_list = [] #empty login list
+
+    
     
     # login method for the user
     @classmethod
