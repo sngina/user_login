@@ -27,8 +27,19 @@ class   Login:
     @classmethod
     def display_credential(cls):
         return cls.login_list
-
-    
+    # Create an account.
+    def create_credentials(self):
+        print("Add your user name")
+        print("\n") 
+        user_name =  input("user name:  ")
+        print("Add your number")
+        print("\n")
+        number = input("number: ")
+        print("Add your email address")
+        print("\n")
+        email = ("email: ")
+        print("Insert your new password")
+        password = input("password: ")
 # Login.login() 
 # Login.save_user("name")
 
