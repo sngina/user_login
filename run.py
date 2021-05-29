@@ -7,7 +7,10 @@ def login():
     Login.login(user_name,password)
 def save_user(user):
     user.save_user()
-
+def delete_credential(user):
+    user.delete_credential()
+def display_credantials(user):
+    user.display_credantials()
 
 
 login()
