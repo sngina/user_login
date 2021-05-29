@@ -5,7 +5,7 @@ class   Login:
         self.phone_number = phone_number
         self.email = email
         self.password = password
-    login_list = ["Stella","Ngina","0726091916","sngina707@gmail.com","Maingi"]
+    login_list = []
     
     # login method for the user
     @classmethod
