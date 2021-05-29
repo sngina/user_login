@@ -11,7 +11,8 @@ def delete_credential(user):
     user.delete_credential()
 def display_credantials(user):
     return Login.display_credential()
-def create_credantials():
+
+    
 
 
 
