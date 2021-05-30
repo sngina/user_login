@@ -56,7 +56,7 @@ class Credential:
         Login.login_list.remove(self)
     @classmethod
     def display_credential(cls):
-        return cls.login_list
+        return cls.user_list
 
 new_user = Login("Peter","Ken","073456723","Ken@gmail.com","maya@2013!")
 Login.login_list.append(new_user)

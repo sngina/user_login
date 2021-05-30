@@ -8,7 +8,7 @@ def save_user(user):
     user.save_user()
 def delete_credential(user): # user delete credentials.
     user.delete_credential()
-def display_credentials(user):
+def display_credentials():
     return Credential.display_credential()
 def find_user(user):
     return Login.login(user)
@@ -55,9 +55,10 @@ def main(): #add a while loop for password..
             if  display_credentials():
                 print("Hey here is a list of all the credentials")
                 print("\n")
-                for login in display_credentials():
-                    print(f"{login.first_name} {login.second_name}...{login.phone_number}....{login.password}")
+                for credentials  in display_credentials():
+                    print(f"{credentials.first_name} {credentials.second_name}...{credentials.phone_number}....{credentials.password}")
                     print('\n')
+
             else:
                 print('\n')
                 print("You don't have an account saved")
@@ -65,6 +66,8 @@ def main(): #add a while loop for password..
         elif    short_code == 'fu':
                 print("Enter the user name you want to search for")
                 search_user = input()
+                if find_user(search_user):
+                    
             
 
 # login()
