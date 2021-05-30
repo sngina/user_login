@@ -33,7 +33,7 @@ To run this project, please follow the following instructions.
 * Clone the repository.
 
       $ git clone `https://github.com/sngina/user_login.git`
-      $ cd password_locker
+      $ cd user_login
 
 * To run the application, in your terminal:
 
