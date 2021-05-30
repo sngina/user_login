@@ -67,7 +67,11 @@ def main(): #add a while loop for password..
                 print("Enter the user name you want to search for")
                 search_user = input()
                 if find_user(search_user):
-                    
+                    search_user = find_user(search_user)
+                    print(f"{search_user.first_name} {search_user.password}")
+                else:
+                    print("The user name does not exist")
+
             
 
 # login()
