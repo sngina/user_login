@@ -3,6 +3,7 @@ from run import save_user
 import unittest
 from   user import  Login
 
+
 class  TestLogin(unittest.TestCase):
     def setUp(self): #first setup
         self.login = Login("Stella","Ngina","0726091999","sngina707@gmail.com","munie")
