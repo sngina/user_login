@@ -46,6 +46,17 @@ def main():
             print("New password...")
             password = input()
             save_user(create_credentials(f_name,p_number,e_address,password)) # create a new user.
+        elif    short_code == 'dc':
+            if  display_credantials():
+                print("Hey here is a list of all the credentials")
+                print("\n")
+                for login in display_credantials():
+                    print(f"{login.first_name} {login.second_name}...{login.phone_number}....{login.password}")
+                    print('\n')
+            else:
+                print('\n')
+                print("You don't have an account saved")
+                print('\n')
 
 # login()
 if  __name__ == '__main__':
