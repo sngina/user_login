@@ -7,11 +7,11 @@ def user_login(user_name,password): # user login
 def save_user(user):
     user.save_user()
 def delete_credential(user): # user delete credentials.
-    user.delete_credential()
+    Credential.delete_credential(user)
 def display_credentials():
     return Credential.display_credential()
 def find_user(user):
-    return Login.login(user)
+    return Credential.find_user(user)
 def create_credentials(fname,lname,phone,email,password): #user creating an account.
     new_user = Credential(fname,lname,phone,email,password)
     return new_user
@@ -33,7 +33,7 @@ def main(): #add a while loop for password..
             print("Invalid user name or password!")
         
     while True:
-        print("Use the short codes:cc - create a new user name,dc- display credentials,fu- find user,su-save user")
+        print("Use the short codes:cc - create a new user name,dc- display credentials,fu- find user,ru-remove user")
         short_code = input().lower()
         if short_code == 'cc':
                 print("New user")
@@ -49,31 +49,55 @@ def main(): #add a while loop for password..
                 print("New password...")
                 password = input()
                 save_credentials(create_credentials(f_name,l_name,p_number,e_address,password)) # create a new user.
-                print(f"{f_name} {password}account created successfully!")
+                print(f"{f_name} {password}  account created successfully!")
 
-        elif    short_code == 'dc':
+        elif    short_code == 'dc': # function of displayin an account
             if  display_credentials():
                 print("Hey here is a list of all the credentials")
                 print("\n")
                 for credentials  in display_credentials():
-                    print(f"{credentials.first_name} {credentials.second_name}...{credentials.phone_number}....{credentials.password}")
+                    print(f"{credentials.first_name} {credentials.last_name}...{credentials.phone_number}....{credentials.password}")
                     print('\n')
 
             else:
                 print('\n')
                 print("You don't have an account saved")
                 print('\n')
-        elif    short_code == 'fu':
+        elif    short_code == 'fu': #function of finding an account
                 print("Enter the user name you want to search for")
-                search_user = input()
-                if find_user(search_user):
-                    search_user = find_user(search_user)
-                    print(f"{search_user.first_name} {search_user.password}")
+                user_name = input()
+                print("\n")
+                # print("Enter user's password")
+                # user_password = input()
+
+                if find_user(user_name):
+                    search_user = find_user(user_name)
+                    print(f"{search_user.first_name} {search_user.last_name} {search_user.email}{search_user.password}")
+                    print('-'*20)
                 else:
                     print("The user name does not exist")
+        elif    short_code == 'ru': # function for removing use
+                print("Enter the user name ")
+                delete_username = input('Firstname: ')
+                
+                f_user = find_user(delete_username)
+                if f_user !=None:
+                    print(f"Are you sure you want to delete {f_user.first_name} ? (y/n)")
+                    user_prompt = input().lower()
+                    if user_prompt == "y":
+                        delete_credential(f_user)
+                    elif user_prompt =="n":
+                        continue
+                    else:
+                        print("din't catch what you said..")
+                        continue
+                else:
+                        print("User doesn't exist")
 
-            
 
+
+                
+                
 # login()
 if  __name__ == '__main__':
     main()

@@ -53,10 +53,17 @@ class Credential:
         print("Insert your new password")
         password = input("password: ")
     def delete_credential(self) :
-        Login.login_list.remove(self)
+        
+        Credential.user_list.remove(self)
     @classmethod
     def display_credential(cls):
         return cls.user_list
+    @classmethod
+    def find_user(cls,user):
+        for i in cls.user_list:
+            if i.first_name == user:
+            
+                return i
 
 new_user = Login("Peter","Ken","073456723","Ken@gmail.com","maya@2013!")
 Login.login_list.append(new_user)
