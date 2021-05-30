@@ -12,12 +12,7 @@ class   Login:
     # login method for the user
     @classmethod
     def login(cls,user_name,password) :
-        if cls.login_list[0] == user_name  and cls.login_list[4] == password:
-            print("Okay!")
-              
-        else:
-            print("Invalid user name and password!")
-            
+        print("Please login in your account")    
         # print(user_name)
         # print(password)
     # save method for the user

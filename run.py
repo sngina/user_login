@@ -1,9 +1,15 @@
 from user import Login
 
-def login(): # user login
+def login(cls,user_name,password): # user login
     print("Please add your username and password!")
     user_name = input("Enter username: ")
     password = input("Enter your password: ")
+    if cls.login_list[0] == user_name  and cls.login_list[4] == password:
+            print("Okay!")
+              
+    else:
+            print("Invalid user name and password!")
+            
     Login.login(user_name,password)
 def save_user(user):
     user.save_user()
@@ -20,9 +26,13 @@ def create_credentials(fname,lname,phone,email,password): #user creating an acco
 def main():
     print("Hello Welcome to your account.What is your user name?")
     user_name = input()
-    print(f"Hello{user_name}.Please insert your password")
-    print("\n")
+    print(f"Hello  {user_name}.Please insert your password")
     password = input()
+    print('\n')
+    while True:
+        
+    
 
-
-login()
+# login()
+if  __name__ == '__main__':
+    main()
