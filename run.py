@@ -30,8 +30,22 @@ def main():
     password = input()
     print('\n')
     while True:
-        
-    
+        print("Use the short codes:cc - create a new user name,dc- display credentials,su-save user,fu- find user")
+        short_code = input().lower()
+        if short_code == 'cc':
+            print("New user")
+            print("-"*10)
+            print("First name....")
+            f_name = input()
+            print("Last name")
+            l_name =input()
+            print("Phone number....")
+            p_number = input()
+            print("Email addrss...")
+            e_address = input()
+            print("New password...")
+            password = input()
+            save_user(create_credentials(f_name,p_number,e_address,password)) # create a new user.
 
 # login()
 if  __name__ == '__main__':
