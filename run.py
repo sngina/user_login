@@ -17,15 +17,20 @@ def create_credentials(fname,lname,phone,email,password): #user creating an acco
     return new_user
     
 def main():
-    print("Hello Welcome to your account.What is your user name?")
-    print("Login...")
-    user_name = input()
-    print(f"Hello  {user_name}.Please insert your password")
-    password = input()
-    print('\n')
-    l_user = user_login(user_name,password):
-    print(f"{l_user.first_name} {l_user.last_name} Successfully logged in!")
-    
+    while True:
+        print("Hello Welcome to your account.What is your user name?")
+        print("Login...")
+        user_name = input()
+        print(f"Hello  {user_name}.Please insert your password")
+        password = input()
+        print('\n')
+        l_user = user_login(user_name,password)
+        if  l_user:
+            print(f"{l_user.first_name} {l_user.last_name} Successfully logged in!")
+            break
+        else:
+            print("Invalid user name or password!")
+        
     while True:
         print("Use the short codes:cc - create a new user name,dc- display credentials,fu- find user,su-save user")
         short_code = input().lower()
