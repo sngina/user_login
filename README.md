@@ -37,8 +37,8 @@ To run this project, please follow the following instructions.
 
 * To run the application, in your terminal:
 
-        $ chmod +x main.py
-        $ ./main.py
+        $ python3.6 run.py
+        $ ./run.py
 
 ## Testing the Application
 * To run the tests for the application file:
