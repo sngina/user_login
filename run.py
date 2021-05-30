@@ -15,8 +15,9 @@ def find_user(user):
 def create_credentials(fname,lname,phone,email,password): #user creating an account.
     new_user = Credential(fname,lname,phone,email,password)
     return new_user
-    
-def main():
+def save_credentials(credentials) :  
+    credentials.save_credentials() 
+def main(): #add a while loop for password..
     while True:
         print("Hello Welcome to your account.What is your user name?")
         print("Login...")
@@ -27,7 +28,7 @@ def main():
         l_user = user_login(user_name,password)
         if  l_user:
             print(f"{l_user.first_name} {l_user.last_name} Successfully logged in!")
-            break
+            break #breaks if the password is correct
         else:
             print("Invalid user name or password!")
         
@@ -35,19 +36,21 @@ def main():
         print("Use the short codes:cc - create a new user name,dc- display credentials,fu- find user,su-save user")
         short_code = input().lower()
         if short_code == 'cc':
-            print("New user")
-            print("-"*10)
-            print("First name....")
-            f_name = input()
-            print("Last name")
-            l_name =input()
-            print("Phone number....")
-            p_number = input()
-            print("Email addrss...")
-            e_address = input()
-            print("New password...")
-            password = input()
-            save_user(create_credentials(f_name,p_number,e_address,password)) # create a new user.
+                print("New user")
+                print("-"*10)
+                print("First name....")
+                f_name = input()
+                print("Last name")
+                l_name =input()
+                print("Phone number....")
+                p_number = input()
+                print("Email address...")
+                e_address = input()
+                print("New password...")
+                password = input()
+                save_credentials(create_credentials(f_name,l_name,p_number,e_address,password)) # create a new user.
+                print(f"{f_name} {password}account created successfully!")
+
         elif    short_code == 'dc':
             if  display_credentials():
                 print("Hey here is a list of all the credentials")
