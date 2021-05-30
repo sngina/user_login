@@ -43,13 +43,13 @@ To run this project, please follow the following instructions.
 ## Testing the Application
 * To run the tests for the application file:
 
-        $ python3 test_main.py
+        $ python3 run.py
 
 ---
 
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |
-| Welcomes user to the applicatin | **In terminal: $./main.py** | Welcome Message. Username & Password? |
+| Welcomes user to the applicatin | **In terminal: $./run.py** | Welcome Message. Username & Password? |
 | Register If new | **Would you like to create a new account** | Provide username, firstname, lastname, phone number, email, password |
 | Display menu Navigation | **What would you like to do?** | Use these codes : new - create a new credential, display - display credentials, delete - delete a credential,   the Application  |
 | Prompt for creating new Credential | **Enter: new** | Enter the required form Account type, login name, email, site Url, password |
