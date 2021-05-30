@@ -12,19 +12,23 @@ class   Login:
     # login method for the user
     @classmethod
     def login(cls,user_name,password) :
-        print("Please login in your account")    
+        for user in cls.login_list:
+            if user.first_name == user_name and user.password == password:
+                return user
+        
+
+            
         # print(user_name)
         # print(password)
     # save method for the user
     def save_user(self) :
         Login.login_list.append(self)
         print("Saved!")
-    def delete_credential(self) :
-        Login.login_list.remove(self)
-    @classmethod
-    def display_credential(cls):
-        return cls.login_list
+    
+    
     # Create an account.
+    
+class Credential:
     def create_credentials(self):
         print("Add your user name")
         print("\n") 
@@ -37,6 +41,14 @@ class   Login:
         email = ("email: ")
         print("Insert your new password")
         password = input("password: ")
+    def delete_credential(self) :
+        Login.login_list.remove(self)
+    @classmethod
+    def display_credential(cls):
+        return cls.login_list
+
+new_user = Login("Peter","Ken","073456723","Ken@gmail.com","maya@2013!")
+Login.login_list.append(new_user)
 # Login.login() 
 # Login.save_user("name")
 

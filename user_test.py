@@ -21,11 +21,7 @@ class  TestLogin(unittest.TestCase):
         self.assertEqual(len(Login.login_list),2)
     def tearDown(self):
         Login.login_list = []
-    def test_save_multiple_user(self):
-        self.create_credentials.save_user()
-        test_user = Login ("Test","user","0712345678","test@user.com") #new contact
-        test_user.save_user()
-        self.assertEqual(len(Login.login_list),2)
+    
 
 
 if __name__ == '__main__':
