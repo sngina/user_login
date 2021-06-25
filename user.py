@@ -16,8 +16,7 @@ class   Login:
             if user.first_name == user_name and user.password == password:
                 return user
         
-
-            
+        
         # print(user_name)
         # print(password)
     # save method for the user
@@ -67,8 +66,3 @@ class Credential:
 
 new_user = Login("Peter","Ken","073456723","Ken@gmail.com","maya@2013!")
 Login.login_list.append(new_user)
-# Login.login() 
-# Login.save_user("name")
-
-
-# Login.delete_contact("name")
