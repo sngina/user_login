@@ -20,7 +20,7 @@ def create_credentials(fname,lname,phone,email,password): #user creating an acco
     return new_user
 def save_credentials(credentials) :  
     credentials.save_credentials()
-def password():
+def password_gen():
     print("Do you want a system generated password?(yes/no)")
     test_user=input()
     if test_user== 'yes':
@@ -35,7 +35,7 @@ def password():
         return hash_pass
     else:
         print('Didnt catch what you wrote Pardon :)')
-        
+        password_gen()
     
 
         
@@ -80,8 +80,8 @@ def main(): #add a while loop for password..
                     p_number = input()
                     print("Email address...")
                     e_address = input()
-                    passwrd = password()
-                    save_credentials(create_credentials(f_name,l_name,p_number,e_address,passwrd)) # create a new user.
+                    hash_wrd = password_gen()
+                    save_credentials(create_credentials(f_name,l_name,p_number,e_address,hash_wrd)) # create a new user.
                     print(f"{f_name}   account created successfully!")
 
                 elif    short_code == 'dc': # function of displayin an account
